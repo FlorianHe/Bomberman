@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May  7 15:51:20 2013 Helaine
-// Last update Tue May 14 11:43:16 2013 buisso_n
+// Last update Tue May  7 16:13:43 2013 Helaine
 //
 
 #include <Clock.hpp>
@@ -22,5 +22,5 @@ int			main()
 {
   Test			test;
 
-  test.run();
+  //  test.run();
 }

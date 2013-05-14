@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May  7 15:53:14 2013 Helaine
-// Last update Tue May  7 16:12:24 2013 Helaine
+// Last update Tue May 14 11:48:14 2013 buisso_n
 //
 
 #include <Clock.hpp>
@@ -16,8 +16,8 @@
 #include <Input.hpp>
 #include <Model.hpp>
 #include <Window.hpp>
-#include	<string>
-#include	<iostream>
+#include <string>
+#include <iostream>
 
 class		Test : public gdl::Game
 {
