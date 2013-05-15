@@ -5,7 +5,7 @@
 ## Login   <helain_f@epitech.net>
 ## 
 ## Started on  Tue May  7 11:57:25 2013 Helaine
-## Last update Tue May 14 15:08:22 2013 buisso_n
+## Last update Wed May 15 14:04:11 2013 Helaine
 ##
 
 NAME=		bomberman

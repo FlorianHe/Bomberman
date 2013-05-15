@@ -1,11 +1,13 @@
-#include <Clock.hpp>
-#include <Color.hpp>
-#include <Game.hpp>
-#include <GameClock.hpp>
-#include <Image.hpp>
-#include <Input.hpp>
-#include <Model.hpp>
-#include <Window.hpp>
+//
+// test.cpp for coucou in /home/helain_f/Semestre_3/cpp/Bomberman
+// 
+// Made by Helaine
+// Login   <helain_f@epitech.net>
+// 
+// Started on  Wed May 15 14:40:28 2013 Helaine
+// Last update Wed May 15 14:44:45 2013 Helaine
+//
+
 #include		"test.hpp"
 
 Test::Test()
@@ -15,11 +17,16 @@ Test::Test()
 Test::~Test()
 {}
 
+void		Test::initialize()
+{
+  this->window_.create();
+
+  //this->camera_.initialize();
+}
+
 void		Test::draw()
 {}
 
-void		Test::initialize()
-{}
 void		Test::unload()
 {}
 void		Test::update()
