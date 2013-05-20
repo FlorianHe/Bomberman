@@ -5,13 +5,14 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 15:40:09 2013 Guillaume
-// Last update Thu May 16 15:23:27 2013 Guillaume
+// Last update Mon May 20 16:10:05 2013 Guillaume
 //
 
 #ifndef			CHARACTER_HH__
 #define			CHARACTER_HH__
 
 #include		<list>
+#include		<vector>
 #include		<iostream>
 #include		"Datagame.hh"
 #include		"Object.hh"
@@ -25,7 +26,7 @@ private:
   int			_nbbomb;
 
 public:
-  Character(Datagame::OBJ const &, std::list<Datagame::OBJ> *, std::list<Object *> *, int = 1, int = 1, int = 1, int = 0, int = 0);
+  Character(Datagame::OBJ const &, std::vector<Datagame::OBJ> *, std::list<Object *> *, int = 0, int = 0, int = 1, int = 1, int = 1);
   virtual ~Character();
   int			getSpeed() const;
   int			getRange() const;

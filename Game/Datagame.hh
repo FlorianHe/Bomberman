@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 14:24:32 2013 Guillaume
-// Last update Mon May 20 10:45:44 2013 Guillaume
+// Last update Mon May 20 16:36:32 2013 Guillaume
 //
 
 #ifndef			DATAGAME_HH__
@@ -13,6 +13,7 @@
 
 #include		<iostream>
 #include		<list>
+#include		<vector>
 
 class Object;
 
@@ -34,12 +35,12 @@ public:
       IA
     };
 
-private:
-  std::list<OBJ>		_map;
+protected:
+  std::vector<OBJ>		_map;
   std::list<Object *>		_obj;
-
+  
 public:
-  Datagame(std::list<OBJ> const &, std::list<Object *>);
+  Datagame(std::vector<OBJ> const &, std::list<Object *>);
   ~Datagame();
 };
 

@@ -5,18 +5,19 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 15:48:02 2013 Guillaume
-// Last update Mon May 20 13:33:32 2013 Guillaume
+// Last update Mon May 20 17:18:36 2013 Guillaume
 //
 
 #include		<iostream>
 #include		<string>
 #include		<list>
+#include		<vector>
 #include		"Datagame.hh"
 #include		"Object.hh"
 #include		"Character.hh"
 #include		"Bomb.hh"
 
-Character::Character(Datagame::OBJ const & type, std::list<Datagame::OBJ> *map, std::list<Object *> *obj, int speed, int range, int nbbomb, int x, int y) :
+Character::Character(Datagame::OBJ const & type, std::vector<Datagame::OBJ> *map, std::list<Object *> *obj, int x, int y, int speed, int range, int nbbomb) :
   Object(type, map, obj, x, y)
 {
   this->_speed = speed;

@@ -5,12 +5,13 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 14:32:51 2013 Guillaume
-// Last update Mon May 20 14:36:22 2013 Guillaume
+// Last update Mon May 20 17:36:03 2013 Guillaume
 //
 
 #include		<iostream>
 #include		<string>
 #include		<map>
+#include		<vector>
 #include		<cstdlib>
 #include		<fstream>
 #include		"Datagame.hh"
@@ -18,7 +19,7 @@
 #include		"Object.hh"
 #include		"Bomb.hh"
 
-std::list<Datagame::OBJ>				Open_map(int ac, char *av[])
+std::vector<Datagame::OBJ>				Open_map(int ac, char *av[])
 {
   if (ac != 2)
     {
@@ -26,7 +27,7 @@ std::list<Datagame::OBJ>				Open_map(int ac, char *av[])
       exit(0);
     }
   std::ifstream			map(av[1]);
-  std::list<Datagame::OBJ>	another;
+  std::vector<Datagame::OBJ>	another;
   if (!map)
     {
       std::cout << "Are you retard\n";
@@ -69,41 +70,41 @@ std::list<Datagame::OBJ>				Open_map(int ac, char *av[])
 	  y++;
 	}
     }
-  int				x = 0;
-  for(std::list<Datagame::OBJ>::iterator it = another.begin(); it != another.end(); it++)
-    {
-      std::cout << (*it);
-      x++;
-      if (x == 15)
-	{
-	  std::cout << std::endl;
-	  x = 0;
-	}
-    }
   return (another);
 }
 
 int			main(int ac, char **av)
 {
-  std::list<Datagame::OBJ>	hey;
-  std::list<Datagame::OBJ>	hihi;
+  std::vector<Datagame::OBJ>	hey;
+  std::vector<Datagame::OBJ>	hihi;
   std::list<Object *>		haha;
 
   hey = Open_map(ac, av);
 
-  Character			*woot = new Character(Datagame::P1, &hey, &haha, 3, 2);
+  Character			*woot = new Character(Datagame::P1, &hey, &haha, 8, 2);
+
+  Character			*woot2 = new Character(Datagame::P2, &hey, &haha, 10, 3);
+  
+  Bomb				*bomb1 = new Bomb(&hey, &haha, 3, 8, 3);
  
-  woot->createBomb();
+  bomb1->explosion();
+  int				x = 0;
+  for(std::vector<Datagame::OBJ>::iterator it=hey.begin(); it!=hey.end(); it++)
+    {
+      std::cout << (*it);
+      if (x == 14)
+	{
+	  std::cout << std::endl;
+	  x = -1;
+	}
+      x++;
+    }
+
   for(std::list<Object *>::iterator it=haha.begin(); it!=haha.end(); it++)
     {
-      std::cout << "woot" << std::endl;
       std::cout << (*it)->getType() << std::endl;
     }
-  woot->deleteObj();
-  for(std::list<Object *>::iterator it=haha.begin(); it!=haha.end(); it++)
-    {
-      std::cout << "woot" << std::endl;
-      std::cout << (*it)->getType() << std::endl;
-    }
+     
+
   return 0;
 }
