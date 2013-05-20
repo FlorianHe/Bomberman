@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 15:48:02 2013 Guillaume
-// Last update Fri May 10 16:03:17 2013 Guillaume
+// Last update Mon May 20 13:33:32 2013 Guillaume
 //
 
 #include		<iostream>
@@ -14,9 +14,10 @@
 #include		"Datagame.hh"
 #include		"Object.hh"
 #include		"Character.hh"
+#include		"Bomb.hh"
 
-Character::Character(Datagame::OBJ const & type, std::list<Datagame::OBJ> map, int speed, int range, int nbbomb, int x, int y) :
-  Object(type, map, x, y)
+Character::Character(Datagame::OBJ const & type, std::list<Datagame::OBJ> *map, std::list<Object *> *obj, int speed, int range, int nbbomb, int x, int y) :
+  Object(type, map, obj, x, y)
 {
   this->_speed = speed;
   this->_range = range;
@@ -67,4 +68,13 @@ void			Character::setNbBombMax(int add)
 void			Character::setNbBomb(int add)
 {
   this->_nbbomb += add;
+}
+
+void			Character::createBomb()
+{
+  if (this->getNbBomb() > 0)
+    {
+      Bomb			*nbomb = new Bomb(this->getFmap(), this->getObj(), this->getRange(), this->getX(), this->getY());
+      this->setNbBomb(-1);
+    }
 }

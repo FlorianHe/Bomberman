@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 14:24:32 2013 Guillaume
-// Last update Fri May 10 15:19:58 2013 Guillaume
+// Last update Mon May 20 10:45:44 2013 Guillaume
 //
 
 #ifndef			DATAGAME_HH__
@@ -14,12 +14,15 @@
 #include		<iostream>
 #include		<list>
 
+class Object;
+
 class			Datagame
 {
 public:
   enum			OBJ
     {
       VIDE,
+      PLEIN,
       CASSABLE,
       BOMB,
       EXPLOSION,
@@ -33,9 +36,10 @@ public:
 
 private:
   std::list<OBJ>		_map;
+  std::list<Object *>		_obj;
 
 public:
-  Datagame(std::list<OBJ> const &);
+  Datagame(std::list<OBJ> const &, std::list<Object *>);
   ~Datagame();
 };
 

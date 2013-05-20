@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 15:14:44 2013 Guillaume
-// Last update Fri May 10 15:23:40 2013 Guillaume
+// Last update Mon May 20 14:30:45 2013 Guillaume
 //
 
 #include		<iostream>
@@ -15,8 +15,8 @@
 #include		"Object.hh"
 #include		"Bomb.hh"
 
-Bomb::Bomb(std::list<Datagame::OBJ> map, int range, int x, int y) :
-  Object(Datagame::BOMB, map, x, y)
+Bomb::Bomb(std::list<Datagame::OBJ> *map, std::list<Object *> *obj, int range, int x, int y) :
+  Object(Datagame::BOMB, map, obj, x, y)
 {
   this->_range = range;
 }
@@ -39,4 +39,15 @@ int			Bomb::getTime() const
 void			Bomb::setTime(int time)
 {
   this->_time = time;
+}
+
+void			Bomb::explosion()
+{
+  int			x;
+  int			y;
+
+  x = 0;
+  y = 0;
+  //besoin de la map
+ 
 }

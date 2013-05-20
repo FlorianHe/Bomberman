@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 14:47:07 2013 Guillaume
-// Last update Fri May 10 15:24:39 2013 Guillaume
+// Last update Mon May 20 13:55:51 2013 Guillaume
 //
 
 #include		<iostream>
@@ -14,39 +14,66 @@
 #include		"Datagame.hh"
 #include		"Object.hh"
 
-Object::Object(Datagame::OBJ const & type, std::list<Datagame::OBJ> map, int x, int y) :
+Object::Object(Datagame::OBJ const & type, std::list<Datagame::OBJ> *map, std::list<Object *> *obj, int x, int y) :
   _type(type),
-  _fmap(&map),
+  _fmap(map),
+  _obj(obj),
   _x(x),
   _y(y)
 {
+  this->_obj->push_back(this);
+  //creation ds la map
 }
 
 Object::~Object()
 {
 }
 
-Datagame::OBJ		Object::getType() const
+Datagame::OBJ			Object::getType() const
 {
   return (this->_type);
 }
 
-int			Object::getX() const
+int				Object::getX() const
 {
   return (this->_x);
 }
 
-int			Object::getY() const
+int				Object::getY() const
 {
   return (this->_y);
 }
 
-void			Object::setX(int x)
+std::list<Datagame::OBJ>*	Object::getFmap() const
+{
+  return (this->_fmap);
+}
+
+std::list<Object *>*		Object::getObj() const
+{
+  return (this->_obj);
+}
+
+void				Object::setX(int x)
 {
   this->_x = x;
 }
 
-void			Object::setY(int y)
+void				Object::setY(int y)
 {
   this->_y = y;
+}
+
+void				Object::deleteObj()
+{
+  for(std::list<Object *>::iterator it=this->_obj->begin(); it!=this->_obj->end(); it++)
+    {
+      if (((*it)->getX() == this->getX()) && ((*it)->getY() == this->getY()) 
+	  && ((*it)->getType() == this->getType()))
+	{
+	  _obj->erase(it);
+	  it--;
+	  break;
+	}
+    }
 }

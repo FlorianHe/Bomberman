@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 16:26:38 2013 Guillaume
-// Last update Fri May 10 16:28:57 2013 Guillaume
+// Last update Thu May 16 15:24:07 2013 Guillaume
 //
 
 #include		<iostream>
@@ -15,8 +15,8 @@
 #include		"Object.hh"
 #include		"Bonus.hh"
 
-Bonus::Bonus(Datagame::OBJ const & type, std::list<Datagame::OBJ> map, int bonus, int x, int y) :
-  Object(type, map, x, y)
+Bonus::Bonus(Datagame::OBJ const & type, std::list<Datagame::OBJ> *map, std::list<Object *> *obj, int bonus, int x, int y) :
+  Object(type, map, obj, x, y)
 {
   this->_bonus = bonus;
 }

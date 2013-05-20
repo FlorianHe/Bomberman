@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 16:13:14 2013 Guillaume
-// Last update Fri May 10 16:26:17 2013 Guillaume
+// Last update Thu May 16 15:24:14 2013 Guillaume
 //
 
 #ifndef			BONUS_HH__
@@ -22,7 +22,7 @@ private:
   int			_bonus;
 
 public:
-  Bonus(Datagame::OBJ const &, std::list<Datagame::OBJ>, int = 1, int = 0, int = 0);
+  Bonus(Datagame::OBJ const &, std::list<Datagame::OBJ> *, std::list<Object *> *, int = 1, int = 0, int = 0);
   virtual ~Bonus();
   int			getBonus() const;
 };

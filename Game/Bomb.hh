@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 15:09:05 2013 Guillaume
-// Last update Fri May 10 15:20:29 2013 Guillaume
+// Last update Mon May 20 13:47:22 2013 Guillaume
 //
 
 #ifndef			BOMB_HH__
@@ -23,11 +23,12 @@ private:
   int			_time;
 
 public:
-  Bomb(std::list<Datagame::OBJ>, int, int, int);
+  Bomb(std::list<Datagame::OBJ> *, std::list<Object *> *, int, int, int);
   virtual ~Bomb();
   int			getRange() const;
   int			getTime() const;
   void			setTime(int);
+  void			explosion();
 };
 
 #endif
