@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May  7 15:53:14 2013 Helaine
-// Last update Wed May 15 14:44:50 2013 Helaine
+// Last update Tue May 21 11:49:40 2013 Helaine
 //
 
 #ifndef		TEST_H_
@@ -17,6 +17,11 @@
 #include	<iostream>
 
 #include	"libgdl_gl-2012.4/include/Game.hpp"
+#include	"Display/Camera.hpp"
+#include	"Display/Primitive.hpp"
+#include	"Display/Cube.hpp"
+#include	"Display/Model.hpp"
+#include	"Display/Pyramid.hpp"
 
 class		Test : public gdl::Game
 {
@@ -29,7 +34,8 @@ public:
   void		unload();
   void		update();
 private:
-  //Camera	camera_;
+  Camera	camera_;
+  std::list<AObject*> objects_;
 };	
 
 #endif

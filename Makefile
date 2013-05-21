@@ -5,13 +5,20 @@
 ## Login   <helain_f@epitech.net>
 ## 
 ## Started on  Tue May  7 11:57:25 2013 Helaine
-## Last update Wed May 15 14:04:11 2013 Helaine
+## Last update Tue May 21 11:47:46 2013 Helaine
 ##
 
 NAME=		bomberman
 
 SRC=		main.cpp \
-		test.cpp
+		test.cpp \
+		Display/Camera.cpp \
+		Display/Vector3f.cpp \
+		Display/Triangle.cpp \
+		Display/Rectangle.cpp \
+		Display/Cube.cpp \
+		Display/Pyramid.cpp \
+		Display/Model.cpp
 
 OBJ=		$(SRC:.cpp=.o)
 
