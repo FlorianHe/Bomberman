@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May 21 11:42:10 2013 Helaine
-// Last update Tue May 21 12:07:45 2013 Helaine
+// Last update Tue May 21 14:14:09 2013 Helaine
 //
 
 #ifndef		BBMAN_H_
@@ -18,7 +18,9 @@
 
 #include	"../libgdl_gl-2012.4/include/Game.hpp"
 #include	"../libgdl_gl-2012.4/include/Resource.hpp"
+#include	"../libgdl_gl-2012.4/include/Image.hpp"
 #include	"../libgdl_gl-2012.4/include/Model.hpp"
+#include	"../libgdl_gl-2012.4/include/ModelException.hpp"
 #include	"AObject.hpp"
 #include	"Vector3f.hpp"
 
@@ -34,6 +36,7 @@ namespace	Model
     void	draw(void);
     private:
     gdl::Model	model_;
+    gdl::Image	texture_;
   };
 }
 
