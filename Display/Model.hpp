@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May 21 11:42:10 2013 Helaine
-// Last update Tue May 21 14:14:09 2013 Helaine
+// Last update Tue May 21 16:38:35 2013 Helaine
 //
 
 #ifndef		BBMAN_H_
@@ -28,15 +28,15 @@ namespace	Model
 {
   class Bomberman : public AObject
   {
-  public:
-    //Bomberman(void);
-    //virtual ~Bomberman(void);
-    void	initialize(void);
-    void	update(gdl::GameClock const &, gdl::Input &);
-    void	draw(void);
-    private:
+  private:
     gdl::Model	model_;
     gdl::Image	texture_;
+  public:
+    Bomberman(void){}
+    ~Bomberman(void){}
+    void	initialize(void);
+    void	update(gdl::GameClock const & gameClock, gdl::Input & input);
+    void	draw(void);
   };
 }
 

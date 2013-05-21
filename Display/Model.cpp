@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May 21 11:45:55 2013 Helaine
-// Last update Tue May 21 14:21:17 2013 Helaine
+// Last update Tue May 21 16:38:03 2013 Helaine
 //
 
 #include	"Model.hpp"
@@ -17,11 +17,6 @@ namespace	Model
     this->model_ = gdl::Model::load("libgdl_gl-2012.4/assets/marvin.fbx");
   }
 
-  /*Bomberman::~Bomberman(void)
-    {
-    //delete this->model_;
-    }*/
-
   void Bomberman::update(gdl::GameClock const & gameClock, gdl::Input & input)
   {
     this->model_.update(gameClock);
@@ -31,6 +26,12 @@ namespace	Model
 
   void Bomberman::draw(void)
   {
+    glPushMatrix();
+    glLoadIdentity();
+    glTranslatef(0.0f, -500.0f, 0.0f);
+    glRotatef(this->rotation_.y, 0.0f, 1.0f, 0.0f);
+    glRotatef(this->rotation_.x, 1.0f, 0.0f, 0.0f);
     this->model_.draw();
+    glPopMatrix();
   }
 }
