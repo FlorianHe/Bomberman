@@ -1,11 +1,11 @@
 //
 // Object.hh for Bomberman in /home/maku/Projets/Bomberman
-// 
+//
 // Made by Guillaume
 // Login   <maku@epitech.net>
-// 
+//
 // Started on  Fri May 10 14:37:19 2013 Guillaume
-// Last update Mon May 20 16:33:52 2013 Guillaume
+// Last update Thu May 23 11:09:08 2013 Augustin Marchand
 //
 
 #ifndef			OBJECT_HH__

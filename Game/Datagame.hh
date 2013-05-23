@@ -1,11 +1,11 @@
 //
 // Datagame.hh for Bomberman in /home/maku/Projets/Bomberman
-// 
+//
 // Made by Guillaume
 // Login   <maku@epitech.net>
-// 
+//
 // Started on  Fri May 10 14:24:32 2013 Guillaume
-// Last update Mon May 20 16:36:32 2013 Guillaume
+// Last update Thu May 23 11:17:39 2013 Augustin Marchand
 //
 
 #ifndef			DATAGAME_HH__
@@ -15,8 +15,8 @@
 #include		<list>
 #include		<vector>
 
-class Object;
-
+class			Object;
+class			Parseur;
 class			Datagame
 {
 public:
@@ -38,7 +38,7 @@ public:
 protected:
   std::vector<OBJ>		_map;
   std::list<Object *>		_obj;
-  
+
 public:
   Datagame(std::vector<OBJ> const &, std::list<Object *>);
   ~Datagame();
