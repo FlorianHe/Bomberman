@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May 21 11:14:34 2013 Helaine
-// Last update Fri May 24 11:31:51 2013 Helaine
+// Last update Fri May 24 13:53:24 2013 Helaine
 //
 
 #include	"Cube.hpp"
@@ -37,7 +37,6 @@ namespace	Object
       glColor3f(0.0f, 1.0f, 0.0f);
     else if (what_ == Datagame::CASSABLE)
       glColor3f(1.0f, 0.0f, 0.0f);
-    glRotatef(this->rotation_.y, 0.0f, 1.0f, 0.0f);
     glVertex3f(-50.0f, 50.0f, 50.0f);
     glVertex3f(-50.0f, -50.0f, 50.0f);
     glVertex3f(50.0f, -50.0f, 50.0f);

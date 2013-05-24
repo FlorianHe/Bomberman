@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Wed May 15 14:40:28 2013 Helaine
-// Last update Fri May 24 13:14:05 2013 Helaine
+// Last update Fri May 24 13:54:23 2013 Helaine
 //
 
 #include		"Game/Datagame.hh"
@@ -23,9 +23,9 @@ Test::~Test()
 void		Test::initialize()
 {
   std::vector<Datagame::OBJ>	map;
-  float		x = 600.0f;
+  float		x = -700.0f;
   float		y = -300.0f;
-  float		z = 900.0f;
+  float		z = -900.0f;
   int		i = 0;
 
   map = Open_map();
@@ -47,11 +47,11 @@ void		Test::initialize()
       if (i == 15)
 	{
 	  //std::cout << "x += 100" << std::endl;
-	  z -= 101.0f;
-	  x = 601.0f;
+	  z += 101.0f;
+	  x = -801.0f;
 	  i = 0;
 	}
-      x -= 101.0f;
+      x += 101.0f;
     }
   std::cout << map.size() << std::endl;
   //this->objects_.push_back(new Model::Bomberman());

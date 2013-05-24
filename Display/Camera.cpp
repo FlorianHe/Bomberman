@@ -5,13 +5,13 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Wed May 15 15:09:07 2013 Helaine
-// Last update Fri May 24 13:15:07 2013 Helaine
+// Last update Fri May 24 13:52:53 2013 Helaine
 //
 
 #include	"Camera.hpp"
 
 Camera::Camera(void)
-  : position_(0.0f, 0.0f, 900.0f), rotation_(0.0f, 0.0f, 0.0f)
+  : position_(0.0f, 300.0f, 1300.0f), rotation_(0.0f, 0.0f, 0.0f)
 {
 }
 
@@ -19,8 +19,9 @@ void		Camera::initialize(void)
 {
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluPerspective(60.0f, /*800.0f / 600.0f*/2.0f, 1.0f, 10000.0f);
-  gluLookAt(position_.x, position_.y - 200.0f, position_.z + 300.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f);
+  gluPerspective(50.0f, 800.0f / 600.0f/*2.0f*/, 1.0f, 10000.0f);
+  gluLookAt(position_.x, position_.y, position_.z, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f);
+  glRotatef(position_.y, -40.0f, 0.0f, 0.0f);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
   glEnable(GL_DEPTH_TEST);
