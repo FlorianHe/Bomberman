@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May 21 11:03:45 2013 Helaine
-// Last update Tue May 21 11:44:43 2013 Helaine
+// Last update Wed May 22 16:31:14 2013 Helaine
 //
 
 #ifndef		AOBJECT_H_
@@ -24,6 +24,10 @@ class		AObject
 public:
   AObject()
   : position_(0.0f, 0.0f, 0.0f), rotation_(0.0f, 0.0f, 0.0f)
+  {
+  }
+  AObject(float x, float y, float z, float rx, float ry, float rz)
+  : position_(x, y, z), rotation_(rx, ry, rz)
   {
   }
   virtual void initialize(void) = 0;

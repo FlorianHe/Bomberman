@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May 21 11:14:34 2013 Helaine
-// Last update Tue May 21 11:41:17 2013 Helaine
+// Last update Fri May 24 11:43:59 2013 Helaine
 //
 
 #include	"Pyramid.hpp"

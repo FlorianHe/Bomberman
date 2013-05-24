@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 // 
 // Started on  Fri May 10 14:32:51 2013 Guillaume
-// Last update Mon May 20 17:36:03 2013 Guillaume
+// Last update Thu May 23 14:03:18 2013 Helaine
 //
 
 #include		<iostream>
@@ -19,14 +19,14 @@
 #include		"Object.hh"
 #include		"Bomb.hh"
 
-std::vector<Datagame::OBJ>				Open_map(int ac, char *av[])
+std::vector<Datagame::OBJ>				Open_map(/*int ac, char *av[]*/)
 {
-  if (ac != 2)
+  /*  if (ac != 2)
     {
       std::cout << "Go fuck yourself\n";
       exit(0);
-    }
-  std::ifstream			map(av[1]);
+      }*/
+  std::ifstream			map("Game/01.map");
   std::vector<Datagame::OBJ>	another;
   if (!map)
     {
@@ -73,7 +73,7 @@ std::vector<Datagame::OBJ>				Open_map(int ac, char *av[])
   return (another);
 }
 
-int			main(int ac, char **av)
+/*int			main(int ac, char **av)
 {
   std::vector<Datagame::OBJ>	hey;
   std::vector<Datagame::OBJ>	hihi;
@@ -108,3 +108,4 @@ int			main(int ac, char **av)
 
   return 0;
 }
+*/

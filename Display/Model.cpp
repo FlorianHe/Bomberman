@@ -5,7 +5,7 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May 21 11:45:55 2013 Helaine
-// Last update Tue May 21 16:38:03 2013 Helaine
+// Last update Wed May 22 12:03:10 2013 Helaine
 //
 
 #include	"Model.hpp"
@@ -20,8 +20,26 @@ namespace	Model
   void Bomberman::update(gdl::GameClock const & gameClock, gdl::Input & input)
   {
     this->model_.update(gameClock);
-    if (input.isKeyDown(gdl::Keys::P) == true)
-      this->model_.play("Take 001");
+    if (input.isKeyDown(gdl::Keys::Up) == true)
+      {
+	this->rotation_.y = (int)rotation_.y + 90;
+	this->model_.play("Take 001");
+      }
+    else if (input.isKeyDown(gdl::Keys::Down) == true)
+      {
+	this->rotation_.y = (int)rotation_.y + 90;
+	this->model_.play("Take 001");
+      }
+    else if (input.isKeyDown(gdl::Keys::Left) == true)
+      {
+	this->rotation_.y = (int)rotation_.y + 90;
+	this->model_.play("Take 001");
+      }
+    else if (input.isKeyDown(gdl::Keys::Right) == true)
+      {
+	this->rotation_.y = (int)rotation_.y + 90;
+	this->model_.play("Take 001");
+      }
   }
 
   void Bomberman::draw(void)

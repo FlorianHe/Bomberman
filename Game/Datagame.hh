@@ -5,7 +5,7 @@
 // Login   <maku@epitech.net>
 //
 // Started on  Fri May 10 14:24:32 2013 Guillaume
-// Last update Thu May 23 11:17:39 2013 Augustin Marchand
+// Last update Thu May 23 17:13:25 2013 Helaine
 //
 
 #ifndef			DATAGAME_HH__
@@ -15,8 +15,8 @@
 #include		<list>
 #include		<vector>
 
-class			Object;
-class			Parseur;
+//class			Object;
+//class			Parseur;
 class			Datagame
 {
 public:
@@ -37,10 +37,11 @@ public:
 
 protected:
   std::vector<OBJ>		_map;
-  std::list<Object *>		_obj;
+  //std::list<Object *>		_obj;
 
 public:
-  Datagame(std::vector<OBJ> const &, std::list<Object *>);
+  Datagame(std::vector<OBJ> const &);
+  //Datagame(std::vector<OBJ> const &, std::list<Object *>);
   ~Datagame();
 };
 

@@ -5,7 +5,7 @@
 ## Login   <helain_f@epitech.net>
 ## 
 ## Started on  Tue May  7 11:57:25 2013 Helaine
-## Last update Tue May 21 16:37:28 2013 Helaine
+## Last update Thu May 23 13:59:00 2013 Helaine
 ##
 
 NAME=		bomberman
@@ -18,7 +18,8 @@ SRC=		main.cpp \
 		Display/Rectangle.cpp \
 		Display/Cube.cpp \
 		Display/Pyramid.cpp \
-		Display/Model.cpp
+		Display/Model.cpp \
+		Game/main.cpp
 
 OBJ=		$(SRC:.cpp=.o)
 

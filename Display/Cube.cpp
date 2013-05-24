@@ -5,13 +5,18 @@
 // Login   <helain_f@epitech.net>
 // 
 // Started on  Tue May 21 11:14:34 2013 Helaine
-// Last update Tue May 21 11:37:09 2013 Helaine
+// Last update Fri May 24 11:31:51 2013 Helaine
 //
 
 #include	"Cube.hpp"
 
 namespace	Object
 {
+  Cube::Cube(float x, float y, float z, float rx, float ry, float rz, Datagame::OBJ what)
+    : AObject(x, y, z, rx, ry, rz), what_(what)
+  {
+  }
+
   void		Cube::initialize(void)
   {
   }
@@ -22,24 +27,34 @@ namespace	Object
 
   void		Cube::draw(void)
   {
+    glPushMatrix();
+    glLoadIdentity();
+    glTranslatef(this->position_.x, this->position_.y, this->position_.z);
     glBegin(GL_QUADS);
-    glColor3f(1.0f, 0.50f, 0.75f);
-    glVertex3f(-150.0f, 150.0f, 150.0f);
-    glVertex3f(-150.0f, -150.0f, 150.0f);
-    glVertex3f(150.0f, -150.0f, 150.0f);
-    glVertex3f(150.0f, 150.0f, 150.0f);
-    glVertex3f(-150.0f, 150.0f, -150.0f);
-    glVertex3f(-150.0f, -150.0f, -150.0f);
-    glVertex3f(-150.0f, -150.0f, 150.0f);
-    glVertex3f(-150.0f, 150.0f, 150.0f);
-    glVertex3f(150.0f, 150.0f, -150.0f);
-    glVertex3f(150.0f, -150.0f, -150.0f);
-    glVertex3f(-150.0f, -150.0f, -150.0f);
-    glVertex3f(-150.0f, 150.0f, -150.0f);
-    glVertex3f(150.0f, 150.0f, 150.0f);
-    glVertex3f(150.0f, -150.0f, 150.0f);
-    glVertex3f(150.0f, -150.0f, -150.0f);
-    glVertex3f(150.0f, 150.0f, -150.0f);
+    if (what_ == Datagame::PLEIN)
+      glColor3f(0.0f, 0.0f, 1.0f);
+    else if (what_ == Datagame::VIDE)
+      glColor3f(0.0f, 1.0f, 0.0f);
+    else if (what_ == Datagame::CASSABLE)
+      glColor3f(1.0f, 0.0f, 0.0f);
+    glRotatef(this->rotation_.y, 0.0f, 1.0f, 0.0f);
+    glVertex3f(-50.0f, 50.0f, 50.0f);
+    glVertex3f(-50.0f, -50.0f, 50.0f);
+    glVertex3f(50.0f, -50.0f, 50.0f);
+    glVertex3f(50.0f, 50.0f, 50.0f);
+    glVertex3f(-50.0f, 50.0f, -50.0f);
+    glVertex3f(-50.0f, -50.0f, -50.0f);
+    glVertex3f(-50.0f, -50.0f, 50.0f);
+    glVertex3f(-50.0f, 50.0f, 50.0f);
+    glVertex3f(50.0f, 50.0f, -50.0f);
+    glVertex3f(50.0f, -50.0f, -50.0f);
+    glVertex3f(-50.0f, -50.0f, -50.0f);
+    glVertex3f(-50.0f, 50.0f, -50.0f);
+    glVertex3f(50.0f, 50.0f, 50.0f);
+    glVertex3f(50.0f, -50.0f, 50.0f);
+    glVertex3f(50.0f, -50.0f, -50.0f);
+    glVertex3f(50.0f, 50.0f, -50.0f);
     glEnd();
+    glPopMatrix();
   }
 }
